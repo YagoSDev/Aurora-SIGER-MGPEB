@@ -1,0 +1,5 @@
+id;periodo;variavel;valor;unidade;aproximado;contexto;fonte_url
+MEDA01;19/02/2021 - inicio da primeira medicao;temperatura_solo_c;-20.0;graus_C;sim;Primeira sessao MEDA em Jezero: temperatura pouco abaixo de -20 C, medicao aproximada;https://www.jpl.nasa.gov/news/nasas-first-weather-report-from-jezero-crater-on-mars/
+MEDA02;19/02/2021 - 30 min apos o inicio;temperatura_solo_c;-25.6;graus_C;nao;Temperatura indicada apos 30 minutos na primeira sessao;https://www.jpl.nasa.gov/news/nasas-first-weather-report-from-jezero-crater-on-mars/
+MEDA03;19/02/2021 - primeiro boletim;pressao_pa;718;Pa;nao;Pressao comunicada no boletim inicial, instante exato nao declarado;https://www.jpl.nasa.gov/news/nasas-first-weather-report-from-jezero-crater-on-mars/
+MEDA04;sols 43-44 - 03 a 04/04/2021;rajada_vento_ms;10;m/s;sim;Rajadas de vento aproximadas, periodo diferente das temperaturas e pressao do primeiro boletim;https://www.jpl.nasa.gov/news/nasas-first-weather-report-from-jezero-crater-on-mars/

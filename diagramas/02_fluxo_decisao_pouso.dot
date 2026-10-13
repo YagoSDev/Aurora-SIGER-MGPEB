@@ -1,0 +1,22 @@
+
+digraph G {
+ graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.33", ranksep="0.52", splines=ortho, fontname="DejaVu Sans", label="MGPEB  |  Fluxo real do protótipo Python", labelloc=t, fontsize=18, fontcolor="#152130"];
+ node [shape=box, style="rounded,filled", color="#c6d3e0", fillcolor="#f4f7fb", fontname="DejaVu Sans", fontcolor="#152130", fontsize=12, margin="0.18,0.13"];
+ edge [fontname="DejaVu Sans", fontsize=10, color="#7f90a3", arrowsize=0.7];
+ start [label="Próximo módulo da fila (FIFO)", fillcolor="#e9f1ff"];
+ checks [label="Avaliar 9 verificações lógicas\ncombustível, atmosfera, pressão, temperatura,\nintegridade, sensores, área, alerta e altitude"];
+ gate [shape=diamond, label="Todas as\ncondições OK?", fillcolor="#e5f8f0", color="#55a98b"];
+ push [label="Registrar decisão na pilha\nantes de alterar o estado", fillcolor="#fff3df"];
+ crit [shape=diamond, label="Há falha crítica?\nCombustível, integridade\nou ambos sensores", fillcolor="#fff2df", color="#e6b267"];
+ landed [label="POUSO AUTORIZADO\nStatus: POUSADO\nÁrea passa a ocupada", fillcolor="#e7f6ef", color="#55a98b"];
+ alert [label="POUSO BLOQUEADO\nStatus: ALERTA", fillcolor="#ffeef0", color="#d96f77"];
+ wait [label="POUSO ADIADO\nStatus: EM ESPERA", fillcolor="#fff7e8", color="#dba94a"];
+ end [label="Retirar módulo da fila\ne atualizar lista de destino", fillcolor="#ebf1f7"];
+ start->checks->gate;
+ gate->push [label="Avaliação concluída"];
+ push->landed [label="Sim"];
+ push->crit [label="Não"];
+ crit->alert [label="Sim"];
+ crit->wait [label="Não"];
+ landed->end; alert->end; wait->end;
+}
