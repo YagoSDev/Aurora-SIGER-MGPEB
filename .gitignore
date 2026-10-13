@@ -1,0 +1,35 @@
+# Arquivos temporarios do Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+ENV/
+
+# Configuracoes locais e segredos
+.env
+.env.*
+!.env.example
+
+# Arquivos de editores e do sistema
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Arquivos de compilacao e logs
+build/
+dist/
+*.egg-info/
+*.log
+*.tmp
+
+# Relatorio academico identificado (evitar publicacao acidental de RM)
+Relatorio_Tecnico_*.pdf
